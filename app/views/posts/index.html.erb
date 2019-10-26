@@ -1,0 +1,20 @@
+<main>
+  <article id="thumbnail_container">
+    <div class="wrapper">
+      <p class="main_title">みんなの記録一覧</p>
+    <div class="grid">
+      <% @posts.each do |post| %>
+      <div class="item">
+        <a href="/posts/<%= post.id %>">
+          <%= image_tag "madai_poware.JPG", class: "" %>
+          <p class="thumbnail_caption"><%= post.menu %></p>
+          <p class="thumbnail_caption user_name">by <span><%= post.user.nickname %></span></p>
+        </a>
+      </div>
+      <% end %>
+      <%= paginate(@posts) %>
+    </div>
+  </article>
+  
+</main>
+

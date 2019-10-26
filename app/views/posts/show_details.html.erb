@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="details">
+    <h3 class="main_title">
+      メニュー情報
+    </h3>
+    <div class="InputContainer">
+        食べた日<br/><%=@posts.date%><br />
+        店名<br /><%= @posts.shop_name%><br />
+        メニュー名<br/><%= @posts.menu%><br />
+        ジャンル<br/><%= @posts.genre %><br/>
+        魚の種類<br/><%=@posts.fish_type%><br />
+        メモ<br /><%= @posts.recipe%><br/>
+    </div>
+      <a class="sent-button" href="/">記録一覧へ</a>
+  </div>
+</div>

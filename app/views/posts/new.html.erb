@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <div class="InputBox">
+    <h3 class="main_title">
+      なに食べた？
+    </h3>
+    <div class="InputContainer">
+      <%= form_for :post, url: posts_path do %>
+        食べた日<br/><input class="input-item" placeholder="日付" type="date" name="date"><br />
+        店名<br/><input class="input-item" placeholder="店名" type="string" name="shop_name"><br />
+        メニュー名<br/><input class="input-item" placeholder="メニュー名" type="string" name="menu"><br />
+        ジャンル<br/><select class="input-item" name="genre">
+          <option value="前菜">前菜</option>
+          <option value="造り">造り</option>
+          <option value="焼き物">焼き物</option>
+          <option value="蒸し物">蒸し物</option>
+          <option value="煮物">煮物</option>
+          <option value="揚げ物">揚げ物</option>
+          <option value="パスタ">パスタ</option>
+          <option value="ご飯">ご飯</option>
+          <option value="寿司">寿司</option>
+          <option value="デザート">デザート</option>
+          <option value="その他">その他</option>
+        </select><br/>
+        魚の種類<br/><select class="input-item" name="fish_type">
+          <option value="白身">白身</option>
+          <option value="赤身">赤身</option>
+          <option value="青魚">青魚</option>
+          <option value="えび">えび</option>
+          <option value="かに">かに</option>
+          <option value="いか・たこ">いか・たこ</option>
+          <option value="貝">貝</option>
+          <option value="その他">その他</option>
+        </select><br />
+        メモ<br/><textarea class="input-item" cols="30" name="recipe" placeholder="メモ" rows="10"></textarea></br>
+    </div>
+        <input class="sent-button" type="submit" value="記録する">
+      <% end %>
+  </div>
+</div>

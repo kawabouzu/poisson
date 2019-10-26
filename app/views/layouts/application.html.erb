@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Poisson</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <%= favicon_link_tag('fish_logo.png') %>
+  </head>
+
+  <body>
+    <header class="page-header wrapper">
+      <h1><a href="/">
+        <%= image_tag "poisson-logo.png", class: "logo" %></a>
+      </h1>
+      <div class="SearchArea">
+        <input class="search-box" type="text" placeholder="食材・レシピで検索">
+        <input class="search-button" type="submit" value="検索">
+      </div>
+      <nav>
+        <% if user_signed_in? %>
+          <ul class="main-navi">
+            <li><a href = "/posts/new">記録する</a></li>
+            <li><a href = "/users/<%= current_user.id %>">マイページ</a></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        <% else %>
+          <ul class="main-navi">
+            <li><%= link_to "ログイン", new_user_session_path, class:'post' %></li>
+            <li><%= link_to "新規登録", new_user_registration_path, class:'post' %></li>
+          </ul>
+        <% end %>
+      </nav>
+    </header>
+
+      <%= yield %>
+
+    <footer class="wrapper">
+      <div>
+        <p><small>&copy; 2019 yone</small></p>
+      </div>
+    </footer>
+  </body>
+</html>

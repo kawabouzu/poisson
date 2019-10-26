@@ -1,0 +1,134 @@
+@charset "UTF-8"
+/* 共通部分 */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  line-height: 1.7;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4%;
+  border: 2px solid black;
+}
+.main_title {
+  font-size: 20px;
+  margin: 10px;
+  text-align: center;
+}
+.user_name {
+  font-size: 12px;
+}
+/* ここまで共通部分 */
+/* ヘッダー部分 */
+header {
+  border-bottom: 5px solid #888;
+}
+
+.page-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.logo {
+  width: 210px;
+  margin: 14px;
+}
+.search-box, .search-button {
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.search-button {
+  padding: 0 0.5rem;
+  background: #dddddd;
+}
+
+.main-navi {
+  position: relative;
+  display: flex;
+  font-size: 1.1rem;
+  list-style: none;
+}
+
+.main-navi li {
+  margin-left: 36px;
+}
+
+.main-navi a {
+  color: black;
+}
+
+.main-navi a:hover{
+  opacity: 0.5;
+}
+
+/* フッター */
+footer {
+  background: #888888;
+  text-align: center;
+}
+
+footer p {
+  display: inline-block;
+  margin: 26px 0;
+  color:#fff;
+  font-size: 0.875rem;
+}
+
+/* index.html */
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 1%;
+  margin-bottom: 20px;
+}
+.thumbnail_caption {
+  color: black;
+}
+
+/* new.html, create.html */
+.InputBox {
+  color: black;
+  max-width: 90vh;
+  margin: 10px auto;
+}
+
+h3 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.InputContainer{
+  margin: 10px;
+  background-color: #dddddd;
+  padding: 5vh;
+}
+.input-item {
+  border: 1px solid black;
+  margin: 10px;
+}
+.sent-button {
+  display: block;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 20px auto 50px;
+  background-color: #dddddd;
+}
